@@ -390,5 +390,10 @@ function pageHistory(){
     $("#searchAssetButton").hide();
 
     $('#data_content').empty();
-    get_asset_page('historyInspection');   
+    //get_asset_page('historyInspection');  
+	$('#data_content').fullCalendar({
+		dayClick: function() {
+			alert('a day has been clicked!');
+		}
+	});
 }
