@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Asset Management</title>
+        
+        <body class="has-header has-footer" onload="onloadSetting()">
+            
+        <div class="header deep-orange-900" id="allHeader">
+            <h1 class="align-left" id='the_head'>Setting</h1>
+        </div>
+        
+        
+        <!---Menu Content -->
+        <div class="content" id="data_content">
+            <div class="list">
+                <div class="padding" style="text-align:center;font-size: large;"><strong>Set for the System Address</strong></div>
+                <div class="item">
+                  <label class="text-orange">Current Address</label><br>
+                  <strong><label id="currentAddress"></label></strong>
+                </div>
+                <div class="item">
+                  <label class="text-orange">New Address</label>
+                  <input type="text" id="inputAddress">
+                </div>
+                <div class="item">
+                  <button class="orange-900 radius full" id="saveAddressButton">Save</button>
+                </div>
+                <div class="item">
+                  <button class="green-900 radius full" id="backAddressButton">Back</button>
+                </div>
+                <!-- <div class="item">
+                  <button class="red radius full" id = "createFile" onclick="createFile()">CREATE FILE</button>
+                  <button class="green radius full" id = "writeFile" onclick="writeFile()">WRITE FILE</button>
+                  <button class="blue radius full" id = "readFile" onclick="readFile()">READ FILE</button>
+                  <button class="purple radius full" id = "removeFile" onclick="removeFile()">DELETE FILE</button>
+                  <textarea id = "textarea"></textarea>
+                </div> -->
+              </div>
+                
+        </div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/notify.js"></script>
+        <script type="text/javascript" src="js/setting.js"></script>
+        </body>
+</html>

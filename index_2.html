@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+	<meta http-equiv="Content-Security-Policy" content="default-src https://codepush.azurewebsites.net 'self' data: gap: cdvfile: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline' https: http: wss: ws:; style-src 'self' 'unsafe-inline'; img-src * filesystem: cdvfile: data:; media-src * blob:">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+	<meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Asset Management</title>
+    </head>
+    <body class="cover vertical-align-center orange-900 align-center blend-soft-light" onload="onloadSetting()">
+		<div class="right">
+			<button class="text-white icon ion-android-settings" onclick="onSetting()"></button>
+		</div>
+		<div class="padding left">
+			<label id="curAddress" style="font-size: 10px;"></label>
+		</div>
+		  <div class="space"></div>
+		  <div class="space"></div>
+		  <div class="space"></div>
+		  <div><img src="img/greskit.png"/></div>
+		  <div style="font-size:20px;">Greskit CMMS</div>
+		  <div class="space"></div>
+		  <div class="space"></div>
+		  <div>
+			<div style="margin-left:5px; margin-right:5px;">
+			  <div class="list no-border opacity-100">
+				<div class="item icon ion-person border-grey border-bottom">
+				  <input class="placeholder-white text-white" type="user" id="user" placeholder="Enter your username">
+				</div>
+				<div class="item icon ion-android-lock border-grey border-bottom">
+				  <input class="placeholder-white text-white" type="password" id="pass" placeholder="Enter your password">
+				</div>
+			  </div>
+			  <div class="space"></div>
+			  <div class="space"></div>
+			  <button class="deep-orange-100 full" id="signin">Sign In</button>
+			</div>
+		  </div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
+        <!--Cordova js berpengaruh pada plugin cordova-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/notify.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/setting.js"></script>
+		
+    </body>
+</html>

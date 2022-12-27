@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src https://codepush.azurewebsites.net 'self' data: gap: cdvfile: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline' https: http: wss: ws:; style-src 'self' 'unsafe-inline'; img-src * filesystem: cdvfile: data:; media-src * blob:"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * "> -->
+
+
+	<meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">  
+        <title>Asset Management</title>
+    </head>
+    <body class="has-footer">
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="img/greskitCircle1.png" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form>
+						<div class="d-flex justify-content-center mb-8 ">
+							<!-- <div class="space"></div> -->
+							<strong style="font-size:20px;color:#c93c00;">LIXIL INDONESIA CMMS</strong>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-center-vertical">
+								<span><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="" class="form-control input_user" id="user" value="" placeholder="username">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-center-vertical">
+								<span><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="" class="form-control input_pass" id="pass" value="" placeholder="password">
+						</div>
+						
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="button" name="button" class="btn login_btn" id="signin">Login</button>
+				   </div>
+					</form>
+				</div>
+			</div>
+		</div>				
+	</div>
+	<div class="footer d-flex justify-content-center">
+				 		<a href="https://greskit.com/" target="_blank" class="text-small text-grey-800"><strong>Powered by Greskit</strong></a>&nbsp;
+				 		<img src="./img/greskit.png" style="width:15px;height: 15px;">
+	</div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/05d0306553.js" crossorigin="anonymous"></script>
+        <!--Cordova js berpengaruh pada plugin cordova-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script type="text/javascript" src="js/extra.js"></script> -->
+        <script type="text/javascript" src="js/notify.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/setting.js"></script>
+		
+    </body>
+</html>

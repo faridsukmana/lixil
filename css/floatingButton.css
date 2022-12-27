@@ -1,0 +1,106 @@
+.mySize{
+ --l: 4em;
+ position:fixed;
+ bottom:80px;
+ right:20px;
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  height: 600px;
+  background: #222;
+  position: relative;
+}
+
+.triggerButton { display: none; }
+
+.triggerButton + label {
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  background-color: #fc0303;
+  height: var(--l);
+  width: var(--l);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  
+}
+
+.triggerButton + label:before, .triggerButton + label:after {
+  position: absolute;
+  content: "\f00a";
+  font-family: FontAwesome;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  top: 15px;
+  left: 18px;
+  /* height: calc(var(--l) / 2 );
+  width: .25em;
+  background-color: #fff;
+  top: 20px;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  margin: auto;
+  border-radius: .5em; */
+  transition: all .25s;
+}
+
+/* .triggerButton + label:before {
+  height: calc(var(--l) / 2 );
+  width: .25em;
+} */
+
+/* .triggerButton + label:after {
+  width: calc(var(--l) / 2 );
+  height: .25em;
+} */
+
+.triggerButton:checked + label:before { transform: rotatez(-45deg); }
+
+.triggerButton:checked + label:after { transform: rotatez(-45deg); }
+
+.one, .two, .three {
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  padding: 1.3em;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  transform: rotateZ(90deg);
+  font-size: 15px;
+  text-align:center;
+  color: #fff;
+  transition-property: all;
+  transition-duration: .35s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.triggerButton:checked ~ .one, .triggerButton:checked ~ .two, .triggerButton:checked ~ .three { opacity: 1; }
+
+.triggerButton:checked ~ .one {
+  background-color: #fc4903;
+  transform: translateX(-5em);
+  transition-delay: .2s;
+}
+
+.triggerButton:checked ~ .two {
+  background-color: #fc9803;
+  transform: translateX(-3.5em) translateY(-3.5em);
+  transition-delay: .1s;
+}
+
+.triggerButton:checked ~ .three {
+  background-color: mediumorchid;
+  transform: translateY(-5em);
+}
+
+.triggerButton:checked ~.one:hover, .triggerButton:checked ~ .two:hover, .triggerButton:checked ~ .three:hover { opacity: .9; }

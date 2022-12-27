@@ -1,0 +1,3 @@
+$('#buttonTest').click(function(){
+    getFormTest();
+})

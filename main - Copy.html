@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/myCSS.css">
+        <link rel="stylesheet" type="text/css" href="css/floatingButton.css">
+        <title>Asset Management</title>
+        
+        <body class="has-header has-footer teal-50" onload="loadBody()">
+
+        <div class="header deep-orange-900" id="allHeader">
+            <h1 class="align-left" id='the_head'>Asset Management</h1>
+            <div class="right"><span class="icon-badge text-small red radius padding" id="updBadge">!</span><button class="icon ion-android-more-vertical" onclick="openPopover('popover1')" id="settingButton"></button></div>
+            <div class="right"><button class="icon ion-search" onclick="" id="searchAssetButton"></button></div>
+            <div class="right"><button class="icon ion-plus" onclick="" id="addAssetButton"></button></div>
+            <div class="right"><span class="icon-badge text-small red radius padding" id="notifBadge">0</span><button class="icon ion-ios-bell" onclick="" id="notifButton"></button></div>
+            <div class="left"><button class="icon ion-arrow-left-c" onclick="" id="backButton"></button></div>
+        </div>
+        
+        <div class="popover" id="popover1">
+            <div class="list">
+              <div class="item blue-grey-900" onclick="getUpdate()"><h1 class="icon ion-earth"> <span class="icon-badge text-small red radius padding" id="updBadge1">!</span> Update</h1></div>
+              <div class="item blue-grey-900" onclick="logout()"><h1 class="icon ion-log-out"> Logout</h1></div>
+            </div>
+          </div>
+
+        <!---Menu Content -->
+        <div class="content" id="data_content">
+
+                
+        </div>
+
+        <!---Footer-->
+        <div class="footer deep-orange-900 shadow tab small">
+            <button class="text-white fas fa-home" id="tab_home" >Home</button>
+            <button class="text-white fas fa-briefcase" id="tab_asset">Asset</button>
+            <button class="text-white fas fa-tools" id="tab_preventive" onclick="">Preventive</button>
+            <button class="text-white fas fa-dolly-flatbed" id="tab_inventory" onclick="">Inventory</button>
+            <button class="text-white fas fa-sign-out-alt" id="tab_profile" >Logout</button>
+        </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
+        <!--Cordova js berpengaruh pada plugin cordova-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- <script type="text/javascript" src="../platforms/android/platform_www/cordova.js"></script> -->
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/notify.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Asset -->
+        <script type="text/javascript" src="js/list_asset.js"></script>
+        <script type="text/javascript" src="js/add_asset.js"></script>
+        <script type="text/javascript" src="js/test.js"></script>
+
+        <!-- Andon -->
+        <script type="text/javascript" src="js/andon.js"></script>
+        
+        <!-- Preventive -->
+        <script type="text/javascript" src="js/preventive.js"></script>
+        <script type="text/javascript" src="js/list_wo.js"></script>
+		<script type="text/javascript" src="js/add_wo.js"></script>
+        <script type="text/javascript" src="js/list_pm.js"></script>
+
+        <!-- Inventory -->
+        <script type="text/javascript" src="js/topup.js"></script>
+        <script type="text/javascript" src="js/movement.js"></script>
+
+        <!-- QrCode -->
+        <script type="text/javascript" src="js/qrcode.min.js"></script>
+
+        <!-- HTML2Canvas -->
+        <script type="text/javascript" src="js/html2canvas.js"></script>
+        <script type="text/javascript" src="js/notification.js"></script>
+
+        <!-- Chart -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+    
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/05d0306553.js" crossorigin="anonymous"></script>
+    
+        <!-- sweetalert2 -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script> -->
+        <!-- Bootstrap -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+    </body>
+</html>

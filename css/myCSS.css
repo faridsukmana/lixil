@@ -1,0 +1,165 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+
+.footer {
+    position:fixed;
+     bottom: 0;
+     width: 100%;
+     height: 60px;
+     background-color: #f5f5f5;
+
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar{
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.group-container{
+    padding:0;
+    height:100%;
+}
+
+.selectors, .block{
+    height:100%;
+    width:100%;
+}
+
+.selectors button{
+    border: 0;
+    border-radius: 0;
+    background-color: #ffc107 !important;
+    width:25%;
+    margin-left: 0;
+}
+
+.selectors button:active{
+    border:0;
+}
+
+.selectors button:focus{
+    border:0;
+    outline: 0;
+    box-shadow: 0 0 0 0px;
+}
+
+.active, .selector-holder{
+    display: flex;
+    flex-direction: column;
+}
+
+.inactive{
+    display: none;
+}
+
+.selector-holder span{
+    font-size: 0.8rem;
+}
+
+/* Colors of the buttons*/
+.button-active, .selectors button:hover, .selectors button:active, .selectors button:focus{
+    color: #f24522;
+}
+
+.button-inactive{
+    color: black;
+}
+
+
+.mycontent{
+	position:absolute; 
+	top:0px; 
+	bottom:40px; 
+	left:0px; 
+	right:0px;
+	overflow-x:hidden; 
+	overflow-y:auto;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: purple;
+}
+
+.btn-circle {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+box-shadow: -11px 5px 4px -5px rgba(0,0,0,0.75);
+-webkit-box-shadow: -11px 5px 4px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: -11px 5px 4px -5px rgba(0,0,0,0.75);
+}
+
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+
+.btn-circle-sm {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 0.9rem;
+}
+
+.btn-circle-lg {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 1.1rem;
+}
+
+.btn-circle-xl {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.3rem;
+}
+
+.list-group {
+    list-style: decimal inside !important
+}
+
+.list-group-item {
+    display: list-item !important
+}
+
+.swal2-popup {
+  font-size: 0.7rem !important;
+}
+.swal2-select{
+    width: 85% !important;
+    /*border: 1 !important;*/
+}
+
+.badge-notif {
+        position:relative;
+}
+
+.badge-notif[data-badge]:after {
+        content:attr(data-badge);
+        position:absolute;
+        top:0.5px;
+        right:0.5px;
+        font-size:.7em;
+        background:white;
+        color:#e53935;
+        font-weight: 1000;
+        width:18px;
+        height:18px;
+        text-align:center;
+        line-height:18px;
+        border-radius: 50%;
+}
