@@ -392,8 +392,28 @@ function pageHistory(){
     $('#data_content').empty();
     //get_asset_page('historyInspection');  
 	$('#data_content').fullCalendar({
-		dayClick: function() {
-			alert('a day has been clicked!');
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay,listWeek'
+		},
+		//defaultDate: '".$datenow."',
+		navLinks: true, // can click day/week names to navigate views
+
+		//weekNumbers: true,
+		weekNumbersWithinDays: true,
+		weekNumberCalculation: 'ISO',
+
+		editable: true,
+		eventLimit: true, 
+		height : 650,
+		events: {
+			type: 'POST',
+			url:glo_url+"get_page.php",
+			data:{'page':'historyInspection'},
+			error: function() {
+				$('#script-warning').show();
+			}
 		}
 	});
 }
