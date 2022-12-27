@@ -390,5 +390,5 @@ function pageHistory(){
     $("#searchAssetButton").hide();
 
     $('#data_content').empty();
-    get_asset_page('historyInspection');   
+    //get_asset_page('dailyCheck');   
 }
