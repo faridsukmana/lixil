@@ -380,3 +380,15 @@ function clickScan(){
         
     });
 }
+
+//Detail history inspection
+function pageHistory(){
+    $("#the_head").text("History Inspection");
+    $("#detail_asset_window").hide();
+    $("#addAssetButton").hide();
+    $("#backButton").hide();
+    $("#searchAssetButton").hide();
+
+    $('#data_content').empty();
+    //get_asset_page('dailyCheck');   
+}
