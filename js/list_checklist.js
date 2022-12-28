@@ -392,8 +392,30 @@ function pageHistory(){
     $('#data_content').empty();
     //get_asset_page('historyInspection');  
 	
+	//======Mendefinisikan id baru di dalam id data content
+	$('#data_content').append('<div id="data_content_option"></div><div id="data_content_append"></div>');
+	
+	$.ajax({
+        type: 'POST',
+		url:glo_url+"get_page.php",
+		data:{'page':'historyInspectionOption'},
+        crossDomain:true,
+        cache:false,
+        beforeSend: function(){
+			
+        },
+        success:function(data){
+            $("#data_content_option").append(data);
+			$('#his_asset').select2();
+        }
+    })
+	
+	get_full_calender('');
+}
+
+function get_full_calender($var){
 	let today = new Date().toISOString().slice(0, 10);
-	$('#data_content').fullCalendar({
+	$('#data_content_append').fullCalendar({
 		header: {
 			left: 'prev,next today',
 			center: 'title',
@@ -409,7 +431,7 @@ function pageHistory(){
 
 		editable: true,
 		eventLimit: true, 
-		height : 650,
+		height : 500,
 		events: {
 			type: 'POST',
 			url:glo_url+"get_page.php",
@@ -424,3 +446,8 @@ function pageHistory(){
 		}
 	});
 }
+
+//Ketika data_content_option on change
+$('#data_content_option').on('change',function(){
+	alert('on change');
+})
