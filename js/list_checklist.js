@@ -382,7 +382,7 @@ function clickScan(){
 }
 
 //Detail history inspection
-function pageHistory(){
+function pageHistory(varpass){ 
     $("#the_head").text("History Inspection");
     $("#detail_asset_window").hide();
     $("#addAssetButton").hide();
@@ -406,14 +406,23 @@ function pageHistory(){
         },
         success:function(data){
             $("#data_content_option").append(data);
+			if(varpass!=''){
+				$('#his_asset').val(varpass);
+			}
 			$('#his_asset').select2();
+			//Ketika data_content_option on change
+			$('#his_asset').on('change',function(){
+				$('#data_content_append').empty();
+				var opAsset = $('#his_asset').val();
+				pageHistory(opAsset);
+			})
         }
     })
 	
-	get_full_calender('');
+	get_full_calender(varpass);
 }
 
-function get_full_calender($var){
+function get_full_calender(varpass){ //alert(varpass);
 	let today = new Date().toISOString().slice(0, 10);
 	$('#data_content_append').fullCalendar({
 		header: {
@@ -435,7 +444,7 @@ function get_full_calender($var){
 		events: {
 			type: 'POST',
 			url:glo_url+"get_page.php",
-			data:{'page':'historyInspection'},
+			data:{'page':'historyInspection','assetid':varpass},
 			error: function() {
 				$('#script-warning').show();
 			}
@@ -446,8 +455,3 @@ function get_full_calender($var){
 		}
 	});
 }
-
-//Ketika data_content_option on change
-$('#data_content_option').on('change',function(){
-	alert('on change');
-})
