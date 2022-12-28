@@ -431,7 +431,7 @@ function get_full_calender(varpass){ //alert(varpass);
 			right: 'month,agendaWeek,agendaDay,listWeek'
 		},
 		defaultDate: today,
-		//navLinks: true, // can click day/week names to navigate views
+		navLinks: true, // can click day/week names to navigate views
 		displayEventTime: false,
 		//weekNumbers: true,
 		weekNumbersWithinDays: true,
@@ -452,6 +452,26 @@ function get_full_calender(varpass){ //alert(varpass);
 		eventTextColor: 'white',
 		eventRender: function(event, element) {
 			$(element).find('.fc-time').remove();
+		},
+		eventClick: function(info) {
+			//alert(info.AssetID+' '+info.date);
+			$("#data_content").empty();
+			var user = localStorage.getItem('user');
+			var dataString = {'id':'no','asset':info.AssetID, 'infoDate':info.date ,'user':user, cekUser:cek_user()}; 
+			 $.ajax({
+				type: "POST",
+				url:glo_url+"form_checklist.php",
+				data:dataString,
+				crossDomain:true,
+				cache:false,
+				beforeSend: function(){
+					loading('Please wait...');
+				},
+				success:function(data){
+					closeLoading(); 
+					$("#data_content").append(data);
+				}
+			})
 		}
 	});
 }
