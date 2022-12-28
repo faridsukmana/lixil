@@ -391,18 +391,21 @@ function pageHistory(){
 
     $('#data_content').empty();
     //get_asset_page('historyInspection');  
+	
+	let today = new Date().toISOString().slice(0, 10);
 	$('#data_content').fullCalendar({
 		header: {
 			left: 'prev,next today',
 			center: 'title',
 			right: 'month,agendaWeek,agendaDay,listWeek'
 		},
-		//defaultDate: '".$datenow."',
-		navLinks: true, // can click day/week names to navigate views
-
+		defaultDate: today,
+		//navLinks: true, // can click day/week names to navigate views
+		displayEventTime: false,
 		//weekNumbers: true,
 		weekNumbersWithinDays: true,
 		weekNumberCalculation: 'ISO',
+		textColor: 'white',
 
 		editable: true,
 		eventLimit: true, 
@@ -414,6 +417,10 @@ function pageHistory(){
 			error: function() {
 				$('#script-warning').show();
 			}
+		},
+		eventTextColor: 'white',
+		eventRender: function(event, element) {
+			$(element).find('.fc-time').remove();
 		}
 	});
 }
